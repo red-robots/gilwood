@@ -1,0 +1,431 @@
+div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
+	overflow-wrap: normal;
+    word-wrap: normal;
+    -ms-word-break: normal;
+    word-break: normal;
+    word-break: normal;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+    page-break-inside: avoid;
+}
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+pre {
+	font-family: $font_pre;
+	font-size: 13px;
+	line-height: 1.3;
+}
+a,button,input {
+	transition: all ease-out .3s;
+}
+.hide {display:none!important;}
+.cf:before, .cf:after {
+    content: " "; 
+    display: table; 
+}
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+.text-center {text-align:center;}
+
+/* Text meant only for screen readers. */
+.sr {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	&:focus {
+		background-color: #333;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		color: #FFF;
+		display: block;
+		@include font-size(0.875);
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+body {
+	font-family: $font_main;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #333;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.site {
+	position: relative;
+}
+/* Site Header */
+.site-header {
+	position: relative;
+	@include tab {
+		height: auto;
+	}
+	.siteinner {
+		position: relative;
+		height: 75px;
+		@include flexbox();
+		@include tab {
+			height: auto;
+			padding-top: 10px;
+			padding-bottom: 30px;
+		}
+	}
+	.tophead {
+		background: $primary;
+		color: #FFF;
+		text-align: center;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		a {
+			color: #FFF!important;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 12px;
+		}
+		span.info {
+			display: inline-block;
+			padding: 0 12px;
+			position: relative;
+			font-size: 13px;
+			line-height: 1;
+			&:after {
+				content:"\2022";
+				display: inline-block;
+				color: #FFF;
+				font-size: 22px;
+				line-height: 1;
+				position: absolute;
+				top: -4px;
+    			right: -6px;
+			}
+		}
+		span.info:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+.logo {
+	display: inline-block;
+    position: relative;
+    width: 152px;
+    z-index: 50;
+    top: 6px;
+	@include tab {
+		width: 300px;
+		top: 7px;
+	}
+	@include mid {
+		width: 350px;
+		top: 0;
+	}
+	a,img {
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+}
+/* Navigation */
+.main-navigation {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include tab {
+		position: relative;
+		@include flexbox();
+		@include flexbox-align-items(center);
+		padding-right: 60px;
+		top: 10px;
+	}
+	@include mid {
+		padding-right: 100px;
+	}
+	.mainmenu {
+		width: 100%;
+		display: none;
+		@include tab {
+			display: block;
+		}
+	}
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+	}
+	li {
+		position: relative;
+	}
+	a {
+		text-decoration: none;
+		display: inline-block;
+		line-height: 1.2;
+	}
+	.menu {
+		@include tab {
+			display: inline-block;
+			float: right;
+		}
+	}
+	.menu > li {
+		@include tab {
+			float: left;
+			margin: 0 2px;
+		}
+	}
+	.menu > li > a {
+		color: $secondary;
+		font-size: 16px;
+		line-height: 1.2;
+		@include tab {
+			padding: 5px 15px 3px;
+		}
+	}
+	.menu > li:hover > a {
+		color: $primary;
+	}
+	.menu li.current_page_item:hover > a,
+	.menu li.current_page_item > a {
+		background: $primary;
+		color: #FFF;
+	}
+	a.roundbtn {
+		@include tab {
+			display: inline-block;
+			width: 52px;
+			height: 50px;
+			text-align: center;
+			background: $primary;
+			border-radius: 100%;
+			color: #FFF;
+			font-size: 14px;
+			line-height: 14px;
+			padding:1px;
+			position: absolute;
+			right: 0;
+			top: 17px;
+			* {
+				transition: all ease-out .3s;
+			}
+			span {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border-radius: 100%;
+				border:1px solid #FFF;
+				background: $secondary;
+			}
+			em {
+				font-style: normal;
+				position: relative;
+				top: 8px;
+			}
+			&:hover {
+				background: $secondary;
+				span {
+					background: $primary;
+				}
+			}
+		}
+		@include mid {
+			top: 25px;
+		}
+	}
+}
+
+.menu-toggle {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 25px;
+	width: 40px;
+	height: 75px;
+	-webkit-appearance: none;
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	padding: 0 0;
+	margin: 0 0;
+	@include tab {
+		display: none;
+	}
+	span.bar {
+		position: relative;
+		top: -3px;
+	}
+	span.bar, span.bar:before, span.bar:after {
+		display: inline-block;
+		width: 100%;
+		height: 5px;
+		transition: all ease-in-out .3s;
+		background: $primary;
+	}
+	span.bar:before, span.bar:after {
+		content:"";
+		position: absolute;
+		left: 0;
+	}
+	span.bar:before {
+		top: -11px;
+	}
+	span.bar:after {
+		top: 11px;
+	}
+}
+
+/* Hero */
+.hero {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+	.hero-caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.wrap {
+		position: relative;
+		&:before {
+			content:"";
+			display: block;
+			width: 100%;
+			height: 115%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0.7;
+			background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+			background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+			background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+		}
+	}
+	.caption {
+		max-width: 900px;
+		width: 100%;
+		margin: 0 auto;
+		color: $secondary;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.2;
+		padding: 15px 30px;
+		position: relative;
+		z-index: 5;
+		@include mid {
+			padding: 30px;
+			font-size: 35px;
+		}
+		@include desk {
+			font-size: 40px;
+		}
+	}
+	.btndiv {
+		a {
+			text-decoration: none;
+			display: inline-block;
+			color: $primary;
+			font-size: 15px;
+			line-height: 1.2;
+			padding: 4px 12px 2px;
+			border: 2px solid $primary;
+			border-radius: 3px;
+			margin-top: 10px;
+			@include tab {
+				margin-top: 0;
+				padding: 5px 15px 3px;
+				font-size: 18px;
+			}
+			&:hover {
+				background: $primary;
+				color: #FFF;
+			}
+		}
+	}
+}
+
+.flexrow {
+	@include flexgroup();
+	@include flexbox-align-items(center);
+}
+
+.section {
+	.imagecol.left {
+		@include tab {
+			width: 28%;
+			float: left;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			float: left;
+		}
+	}
+	.textcol.right {
+		@include tab {
+			width: 72%;
+			float: right;
+		}
+	}
+	.textcol {
+		.pad {
+			padding: 30px 8%;
+			font-size: 16px;
+			line-height: 1.6;
+		}
+		h1, h2 {
+			font-size: 30px;
+			font-weight: 500;
+			line-height: 1.3;
+			margin: 0 0 20px;
+		}
+	}
+}
+.event-info {
+	display: inline-block;
+	border: 1px solid $secondary;
+	padding: 15px 40px;
+	margin-top: 20px;
+	.event-title {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.3;
+		color: $secondary;
+		margin-bottom: 8px;
+	}
+	.time {
+		color: $primary;
+		padding-right: 2px;
+	}
+}
