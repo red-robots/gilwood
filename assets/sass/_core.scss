@@ -791,6 +791,9 @@ body {
 				margin-right: 0;
 				margin-left: 10px;
 			}
+			&:hover {
+				color: $secondary;
+			}
 		}
 	}
 }

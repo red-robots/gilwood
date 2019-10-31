@@ -1891,4 +1891,4 @@ body{font-family:"Heebo",sans-serif;font-size:15px;line-height:1.5;color:#333;ov
 }@media screen and (max-width:780px){.foot-links .social-media{padding-left:20px;padding-right:20px;text-align:center}
 }.foot-links .social-media a{font-size:30px;color:#FFF;display:inline-block;margin-right:10px;margin-left:10px}
 @media(min-width:960px){.foot-links .social-media a{margin-right:0;margin-left:10px}
-}
+}.foot-links .social-media a:hover{color:#0095a8}
