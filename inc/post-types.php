@@ -9,29 +9,13 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
         array(
-            'post_type' => 'testimonials',
-            'menu_name' => 'Testimonials',
-            'plural'    => 'Testimonials',
-            'single'    => 'Testimonial',
-            'menu_icon' => 'dashicons-format-quote',
-            'supports'  => array('title','editor')
+            'post_type' => 'events',
+            'menu_name' => 'Events',
+            'plural'    => 'Events',
+            'single'    => 'Event',
+            'menu_icon' => 'dashicons-calendar-alt',
+            'supports'  => array('title','editor','thumbnail')
         ),
-        array(
-            'post_type' => 'teams',
-            'menu_name' => 'Teams',
-            'plural'    => 'Teams',
-            'single'    => 'Team',
-            'menu_icon' => 'dashicons-groups',
-            'supports'  => array('title','editor')
-        ),
-        array(
-            'post_type' => 'location',
-            'menu_name' => 'Locations',
-            'plural'    => 'Locations',
-            'single'    => 'Location',
-            'menu_icon' => 'dashicons-location',
-            'supports'  => array('title','editor')
-        )
     );
     
     if($post_types) {
