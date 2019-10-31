@@ -67,7 +67,7 @@ body {
 	overflow-x: hidden;
 }
 .wrapper {
-	max-width: 1200px;
+	max-width: 1300px;
 	width: 100%;
 	margin: 0 auto;
 	padding-left: 20px;
@@ -321,7 +321,7 @@ body {
 			content:"";
 			display: block;
 			width: 100%;
-			height: 115%;
+			height: 150%;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -377,7 +377,6 @@ body {
 
 .flexrow {
 	@include flexgroup();
-	@include flexbox-align-items(center);
 }
 
 .section {
@@ -429,3 +428,370 @@ body {
 		padding-right: 2px;
 	}
 }
+.titlediv {
+	background: $primary;
+	color: #FFF;
+	text-align: center;
+	padding: 10px 20px;
+	span {
+		font-size: 25px;
+		font-weight: 400;
+		line-height: 1.3;
+	}
+}
+.section.row1 {
+	.flexrow {
+		@include flexbox-align-items(center);
+	}
+}
+.section.news {
+	border-bottom: 15px solid $primary;
+	.newsflex {
+		overflow: hidden;
+		@include tab {
+			@include flexgroup();
+			height: 380px;
+		}
+	}
+	.newscol {
+		position: relative;
+	}
+	.newscol.left {
+		padding: 40px 50px;
+		width: 100%;
+		@include tab {
+			width: 70%;
+			float: left;
+			padding: 50px 5%;
+			@include flexgroup();
+			@include flexbox-align-items(center);
+		}
+	}
+	.newscol.right {
+		background: #eaeaea;
+		width: 100%;
+		@include tab {
+			width: 30%;
+			float: left;
+			@include flexgroup();
+			@include flexbox-align-items(center);
+		}
+		.inside {
+			padding: 30px;
+			@include tab {
+				padding: 40px 30px;
+			}
+			@include mid {
+				padding: 40px 60px;
+			}
+		}
+		.lists {
+			margin: 0 0;
+			padding: 0 0;
+			list-style: none;
+			li {
+				position: relative;
+				&:before {
+					content:"";
+					display: block;
+					width: 6px;
+					height: 6px;
+					border-radius: 100%;
+					position: absolute;
+					top: 13px;
+					left: -12px;
+					background: transparent;
+				}
+			}
+			a {
+				color: $gray;
+				text-decoration: none;
+				display: inline-block;
+				line-height: 1.5;
+				padding: 5px 0;
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+			li.active {
+				&:before {
+					background: $primary;
+				}
+				a {
+					color: $primary;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.coltitle {
+			margin: 0 0 15px;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 1.3;
+		}
+	}
+	.flexrow {
+		@include flexbox-align-items(center);
+	}
+	.news-image {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-bottom: 20px;
+		width: 100%;
+		@include tab {
+			width: 38%;
+			margin-bottom: 0;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.noimage .news-text {
+		width: 100%;
+	}
+	.hasimage .news-text {
+		@include tab {
+			width: 62%;
+			padding-left: 40px;
+		}
+	}
+	.newstitle {
+		color: $primary;
+		margin: 0 0 10px;
+		font-size: 25px;
+		font-weight: 500;
+		line-height: 1.3;
+	}
+	.btndiv {
+		margin-top: 20px;
+		a {
+			text-decoration: none;
+			font-size: 14px;
+			color: $primary;
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+	.owl-stage {
+		@include tab {
+			@include flexgroup();
+			@include flexbox-align-items(center);
+		}
+	}
+	.owl-dots,
+	.owl-nav {
+		display: none;
+	}
+	.customnav {
+		position: absolute;
+		top: 0;
+		width: 40px;
+		height: 100%;
+		z-index: 10;
+		font-size: 20px;
+		line-height: 1;
+		text-decoration: none;
+		color: $primary;
+		text-align: center;
+		transition: all ease-out .3s;
+		opacity: 0.65;
+		@include flexgroup();
+		@include flexbox-align-items(center);
+		@include flexbox-justify(center);
+		@include tab {
+			width: 5%;
+			font-size: 30px;
+
+		}
+		&.prev {
+			left: 0;
+		}
+		&.next {
+			right: 0;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.content-area.default {
+	min-height: 30em;
+}
+
+/* Footer */
+.site-footer {
+	background: $secondary;
+	.link-with-icons {
+		background: $secondary;
+		padding: 20px 0;
+	}
+	.icondiv {
+		margin-bottom: 10px;
+	}
+	.icondiv img {
+		width: 80px;
+		height: auto;
+		border-radius: 100%;
+		transition: all ease-out .3s;
+	}
+	.flexrow {
+		@include flexgroup();
+		@include flexbox-align-items(center);
+		@include flexbox-justify(center);
+	}
+	.linkcol {
+		width: 50%;
+		text-align: center;
+		padding: 20px;
+		@include tab {
+			width: 25%;
+		}
+		a {
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1.3;
+			color: #FFF;
+		}
+	}
+	.linkcol a:hover {
+		.icondiv img {
+			transform: scale(1.1);
+			box-shadow: 0 0 8px rgba(0,0,0,0.5);
+		}
+	}
+}
+.foot-links {
+	background: $gray;
+	color: rgba(255,255,255,.75);
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 15px;
+	a {
+		text-decoration: none;
+		display: inline-block;
+		color: rgba(255,255,255,.75);
+		&:hover {
+			color: rgba(255,255,255,1);
+		}
+	}
+	@include tab {
+		font-size: 13px;
+	}
+	.footflex {
+		@include flexgroup();
+	}
+	.footlogo img {
+		width: 200px;
+		height: auto;
+	}
+	.fotcol {
+		width: 100%;
+		position: relative;
+	}
+	.fotcol.left {
+		margin-bottom: 20px;
+		text-align: center;
+		@include tab {
+			width: 26%;
+			margin-bottom: 0;
+			border-right: 1px solid #FFF;
+			text-align: left;
+			padding-right: 20px;
+		}
+	}
+	.fotcol.right {
+		@include tab {
+			width: 74%;
+		}
+	}
+	.info {
+		display: block;
+		width: 100%;
+		line-height: 1.3;
+		margin: 10px 0;
+		a {
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.footlinkscol {
+		// @include flexgroup();
+		// @include flexbox-align-items(flex-start);
+		@include flexbox();
+		@media screen and (max-width: $midwidth) {
+			@include flexbox-wrap(wrap);
+			@include flexbox-direction(row);
+		}
+	}
+	.flinkcol {
+		width: 100%;
+		padding: 0 20px;
+		@media screen and (max-width: $midwidth) {
+			width: 30%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		@media screen and (max-width: $tabwidth) {
+			width: 50%;
+		}
+		.ftitle {
+			strong {
+				color: #FFF;
+				font-size: 15px;
+				font-weight: 500;
+			}
+		}
+		a {
+			text-decoration: none;
+			display: inline-block;
+			padding: 3px 0;
+			line-height: 1.3;
+			&:hover {
+				color: $secondary;
+			}
+		}
+	}
+	ul.flinks {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+	}
+	.social-media {
+		width: 100%;
+		float: left;
+		margin-top: 10px;
+		text-align: left;
+		padding-left: 12px;
+		@include mid {
+			margin-top: 0;
+			position: absolute;
+			bottom: 0;
+			text-align: right;
+		}
+		@media screen and (max-width: $tabwidth) {
+			padding-left: 20px;
+			padding-right: 20px;
+			text-align: center;
+		}
+		a {
+			font-size: 30px;
+			color: #FFF;
+			display: inline-block;
+			margin-right: 10px;
+			margin-left: 10px;
+			@include mid {
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+

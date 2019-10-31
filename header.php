@@ -38,7 +38,7 @@
 					<span class="info"><?php echo $address2 ?></span>
 				<?php } ?>
 				<?php if ($phone) { ?>
-					<span class="info"><a href="tel:<?php echo format_phone_number($phone) ?>"></a><?php echo $phone ?></span>
+					<span class="info"><a href="tel:<?php echo format_phone_number($phone) ?>"><?php echo $phone ?></a></span>
 				<?php } ?>
 			</div>
 		</div>
