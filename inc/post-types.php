@@ -16,6 +16,14 @@ function js_custom_init() {
             'menu_icon' => 'dashicons-calendar-alt',
             'supports'  => array('title','editor','thumbnail')
         ),
+        array(
+            'post_type' => 'staff',
+            'menu_name' => 'Staff',
+            'plural'    => 'Staff',
+            'single'    => 'Staff',
+            'menu_icon' => 'dashicons-businessman',
+            'supports'  => array('title','editor','thumbnail')
+        ),
     );
     
     if($post_types) {
