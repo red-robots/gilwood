@@ -11,20 +11,28 @@
  *
  * @package bellaworks
  */
-
+$banner_image = get_field('banner_image');
 get_header(); ?>
 
 <div id="primary" class="content-area default cf">
 	<main id="main" class="site-main cf" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-			<h1 style="display:none"><?php the_title(); ?></h1>
+			<?php if ($banner_image) { ?>
+				<h1 style="display:none"><?php the_title(); ?></h1>
+				<?php if ( get_the_content() ) { ?>
+				<div class="main-text-content">
+					<div class="wrapper"><?php the_content(); ?></div>
+				</div>	
+				<?php } ?>
 
-			<?php if ( get_the_content() ) { ?>
-			<div class="main-text-content">
-				<div class="wrapper"><?php the_content(); ?></div>
-			</div>	
+			<?php } else { ?>
+				<header class="page-header wrapper">
+					<h1 class="page-title"><?php the_title(); ?></h1>
+				</header>
+				<div class="page-content wrapper"><?php the_content(); ?></div>
 			<?php } ?>
+
 			
 			<?php  
 				$sections = get_field('sections');

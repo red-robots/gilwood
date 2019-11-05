@@ -10,9 +10,13 @@
 
 
 <?php wp_head(); ?>
+<?php  
+$banner_image = get_field('banner_image');
+$bodyClass = ($banner_image) ? 'hasbanner':'nobanner';
+?> 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class($bodyClass); ?>>
 <div id="page" class="site cf">
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
 	
