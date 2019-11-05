@@ -68,16 +68,10 @@ jQuery(document).ready(function ($) {
 	new WOW().init();
 
 
-	$(document).on("click","#toggleMenu",function(){
+	$(document).on("click",".menu-toggle",function(){
 		$(this).toggleClass('open');
-		$('.mobile-navigation').toggleClass('open');
+		$('.main-navigation').toggleClass('open');
 		$('body').toggleClass('open-mobile-menu');
-		$('.site-header .logo').toggleClass('fixed');
-		var parentdiv = $(".mobile-navigation").outerHeight();
-		var mobile_nav_height = $(".mobile-main-nav").outerHeight();
-		if(mobile_nav_height>parentdiv) {
-			$('.mobile-navigation').addClass("overflow-height");
-		}
 	});
 
 });// END #####################################    END
