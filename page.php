@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area cf">
+<div id="primary" class="content-area default cf">
 	<main id="main" class="site-main cf" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
