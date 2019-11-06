@@ -1910,6 +1910,7 @@ h2.hd{margin:0;font-size:25px;font-weight:500;line-height:1.3;color:#a11319}
 }@media(min-width:780px){.section-staff .texwrap{padding-left:30px}
 }@media(min-width:960px){.section-staff .texwrap{padding-left:50px}
 }.section-staff .subhd{margin-bottom:20px}
+.section-staff .jobtitle{font-size:17px;font-weight:500}
 .sitemapMenu{margin-top:30px}
 .sitemapMenu ul{margin:0;padding:0;list-style:none}
 .sitemapMenu ul li{position:relative}
