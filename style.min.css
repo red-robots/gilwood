@@ -1880,6 +1880,7 @@ body{font-family:"Heebo",sans-serif;font-size:15px;line-height:1.5;color:#333;ov
 .section.news .customnav:hover{opacity:1}
 .content-area.default{min-height:30em}
 .content-area.default .site-main{padding-top:50px;padding-bottom:50px}
+.content-area.default.sectional .site-main{padding-top:0;padding-bottom:0}
 .nobanner .content-area.default .page-header{margin-bottom:30px}
 .main-text-content{padding-top:30px}
 h2.hd{margin:0;font-size:25px;font-weight:500;line-height:1.3;color:#a11319}

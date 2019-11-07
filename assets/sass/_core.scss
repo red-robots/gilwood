@@ -756,6 +756,12 @@ body {
 		padding-top: 50px;
 		padding-bottom: 50px;
 	}
+	&.sectional {
+		.site-main {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
 }
 .nobanner .content-area.default {
 	.page-header {

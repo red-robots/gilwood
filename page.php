@@ -14,7 +14,7 @@
 $banner_image = get_field('banner_image');
 get_header(); ?>
 
-<div id="primary" class="content-area default cf">
+<div id="primary" class="content-area sectional default cf">
 	<main id="main" class="site-main cf" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
