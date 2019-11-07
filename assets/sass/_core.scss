@@ -782,6 +782,8 @@ h2.hd {
 	}
 	.subhd {
 		margin-bottom: 20px;
+		font-size: 17px;
+		font-weight: 500;
 	}
 	.wrapper {
 		@include flexgroup();
@@ -963,6 +965,79 @@ h1.entry-title {
 		display: inline-block;
 		&:hover {
 			color: $primary;
+		}
+	}
+}
+.staffpage {
+	.head {
+		margin-bottom: 30px;
+	}
+	.head h1 {
+		margin: 0 0;
+		font-size: 25px;
+		font-weight: 500;
+		line-height: 1.3;
+		color: $primary;
+	}
+	.jobtitle {
+		font-size: 17px;
+		font-weight: 500;
+	}
+	.photo img {
+		width: 100%;
+		height: auto;
+	}
+	.hasphoto {
+		.photo {
+			margin-bottom: 20px;
+			@include tab {
+				width: 30%;
+				float: left;
+			}
+		}
+		.text {
+			@include tab {
+				width: 66%;
+				float: right;
+			}
+		}
+	}
+}
+.contactpage {
+	h3 {
+		margin-top: 30px;
+		margin-bottom: 5px;
+	}
+	.contact h3:first-child {
+		margin-top: 0;
+	}
+	.contact p {
+		margin-top: 0;
+	}
+	.contentcol {
+		width: 100%;
+		float: left;
+		@include tab {
+			width: 48%;
+		}
+		&.contact {
+			margin-bottom: 20px;
+		}
+		&.map {
+			float: right;
+		}
+	}
+	.map iframe {
+		width: 100%!important;
+		height: 350px!important;
+		@include tab {
+			height: 380px!important;
+		}
+		@include mid {
+			height: 400px!important;
+		}
+		@include desk {
+			height: 450px!important;
 		}
 	}
 }

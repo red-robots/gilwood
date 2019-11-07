@@ -1885,7 +1885,7 @@ h2.hd{margin:0;font-size:25px;font-weight:500;line-height:1.3;color:#a11319}
 @media(min-width:780px){.section-text-image{padding-top:50px;padding-bottom:50px}
 }@media(min-width:960px){.section-text-image{padding-top:70px;padding-bottom:70px}
 }.section-text-image.even{background:#ebf7f8}
-.section-text-image .subhd{margin-bottom:20px}
+.section-text-image .subhd{margin-bottom:20px;font-size:17px;font-weight:500}
 .section-text-image .wrapper{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .section-text-image .imagecol{width:100%;float:left}
 .section-text-image .imagecol .pic{width:100%;float:left;padding:10px}
@@ -1925,7 +1925,25 @@ h2.hd{margin:0;font-size:25px;font-weight:500;line-height:1.3;color:#a11319}
 }@media(min-width:960px){.sitemapMenu .menu>ul{-webkit-column-count:4;-moz-column-count:4;column-count:4}
 }.sitemapMenu a{color:#0095a8;text-decoration:none;display:inline-block}
 .sitemapMenu a:hover{color:#a11319}
-.error-404 .page-content p{margin-top:0}
+.staffpage .head{margin-bottom:30px}
+.staffpage .head h1{margin:0;font-size:25px;font-weight:500;line-height:1.3;color:#a11319}
+.staffpage .jobtitle{font-size:17px;font-weight:500}
+.staffpage .photo img{width:100%;height:auto}
+.staffpage .hasphoto .photo{margin-bottom:20px}
+@media(min-width:780px){.staffpage .hasphoto .photo{width:30%;float:left}
+}@media(min-width:780px){.staffpage .hasphoto .text{width:66%;float:right}
+}.contactpage h3{margin-top:30px;margin-bottom:5px}
+.contactpage .contact h3:first-child{margin-top:0}
+.contactpage .contact p{margin-top:0}
+.contactpage .contentcol{width:100%;float:left}
+@media(min-width:780px){.contactpage .contentcol{width:48%}
+}.contactpage .contentcol.contact{margin-bottom:20px}
+.contactpage .contentcol.map{float:right}
+.contactpage .map iframe{width:100% !important;height:350px !important}
+@media(min-width:780px){.contactpage .map iframe{height:380px !important}
+}@media(min-width:960px){.contactpage .map iframe{height:400px !important}
+}@media(min-width:1200px){.contactpage .map iframe{height:450px !important}
+}.error-404 .page-content p{margin-top:0}
 .site-footer{background:#0095a8}
 .site-footer .link-with-icons{background:#0095a8;padding:20px 0}
 .site-footer .icondiv{margin-bottom:10px}
