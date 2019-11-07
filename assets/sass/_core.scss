@@ -23,6 +23,12 @@ pre {
 a,button,input {
 	transition: all ease-out .3s;
 }
+a {
+	color: $link_color;
+	&:hover {
+		color: $link_hover;
+	}
+}
 .hide {display:none!important;}
 .cf:before, .cf:after {
     content: " "; 
