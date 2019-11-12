@@ -13,11 +13,11 @@ jQuery(document).ready(function ($) {
 		margin:10,
 		autoHeight:false,
 		autoplay: true,
-		autoplayTimeout: 6000,
+		autoplayTimeout: 10000,
 		loop: true,
 		dots: true,
-		nav    : true,
-		smartSpeed :900,
+		nav  : true,
+		smartSpeed :2000,
 		navText : ["<i class='custom-arrow left'><span class='sr'>Previous</span></i>","<i class='custom-arrow right'><span class='sr'>Next</span></i>"]
 	});
 
