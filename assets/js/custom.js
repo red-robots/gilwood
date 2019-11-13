@@ -10,7 +10,8 @@ jQuery(document).ready(function ($) {
 	/* Slideshow */
 	var swiper = new Swiper('#slideshow', {
 		slidesPerView: 1,
-		spaceBetween: 30,
+		spaceBetween: 0,
+		effect: 'slide', /* "fade", "cube", "coverflow" or "flip" */
 		loop: true,
 		autoplay: {
 			delay: 8000,
