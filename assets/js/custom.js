@@ -7,6 +7,25 @@
 
 jQuery(document).ready(function ($) {
 
+	/* Slideshow */
+	var swiper = new Swiper('#slideshow', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+    });
+
+
 	var newsCarousel = $("#news-carousel");
 	newsCarousel.owlCarousel({
 		items:1,
@@ -39,15 +58,7 @@ jQuery(document).ready(function ($) {
 		$("#news-carousel " + action).trigger("click");
 	});
 	
-	/*
-	*
-	*	Flexslider
-	*
-	------------------------------------*/
-	$('.flexslider').flexslider({
-		animation: "slide",
-	}); // end register flexslider
-	
+
 	/*
 	*
 	*	Colorbox

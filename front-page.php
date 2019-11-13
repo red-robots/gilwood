@@ -59,7 +59,7 @@
 	if ( $news->have_posts() ) { ?>
 	<section class="section row2 news">
 		<div class="titlediv">
-			<span>News</span>
+			<span>News &amp; Events</span>
 		</div>
 		<div class="news-items">
 			<div class="newsflex cf">

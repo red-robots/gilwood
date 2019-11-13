@@ -9,14 +9,6 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
         array(
-            'post_type' => 'events',
-            'menu_name' => 'Events',
-            'plural'    => 'Events',
-            'single'    => 'Event',
-            'menu_icon' => 'dashicons-calendar-alt',
-            'supports'  => array('title','editor','thumbnail')
-        ),
-        array(
             'post_type' => 'staff',
             'menu_name' => 'Staff',
             'plural'    => 'Staff',

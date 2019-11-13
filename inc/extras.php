@@ -213,3 +213,15 @@ function get_social_links() {
     return $social;
 }
 
+function display_banner() {
+    $banner = array();
+    $banner_image = get_field('banner_image');
+    if($banner_image) {
+        $banner['image'] = $banner_image;
+        $banner['caption'] = get_field('banner_caption');
+        $banner['button_name'] = get_field('banner_button_name');
+        $banner['button_link'] = get_field('banner_button_link');
+    }
+    return $banner;
+}
+
