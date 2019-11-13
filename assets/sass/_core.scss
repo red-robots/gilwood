@@ -1298,6 +1298,12 @@ h1.entry-title {
 	}
 }
 .widget-area {
+	.widget {
+		margin-bottom: 30px;
+	}
+	.widget:last-child {
+		margin-bottom: 0;
+	}
 	.widget-title {
 		margin: 10px 0 5px;
 		font-size: 18px;
