@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
 		spaceBetween: 30,
 		loop: true,
 		autoplay: {
-			delay: 5000,
+			delay: 8000,
 		},
 		pagination: {
 			el: '.swiper-pagination',
