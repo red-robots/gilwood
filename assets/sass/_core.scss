@@ -1235,18 +1235,27 @@ h1.pagetitle {
 		margin: 0 -15px;
 	}
 	.flex-columns {
-		display: flex;
-    	flex-wrap: wrap;
-		-webkit-box-flex: 2;
-		flex: 2 1 660px;
-		align-self: flex-start;
+		@include flexgroup();
 	}
 	.news-entry {
-		-webkit-box-flex: 1;
-	    flex: 1 1 300px;
-	    margin: 15px;
-	    background-color: #fff;
-	    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.13);
+		// -webkit-box-flex: 1;
+	 //    flex: 1 1 300px;
+	 //    margin: 15px;
+	 	padding: 15px;
+	 	@include tab {
+	 		width: 33.3%;
+	 	}
+	 	&.twocol {
+	 		@include tab {
+		 		width: 50%;
+		 	}
+	 	}
+	    .inside {
+	    	padding: 0;
+	    	height: 100%;
+	    	background-color: #fff;
+	    	box-shadow: 0 1px 2px 0 rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.13);
+	    }
 	    figure {
 	    	margin: 0 0;
 	    	display: block;
@@ -1368,7 +1377,10 @@ h1.pagetitle {
 	}
 	.entry-content {
 		margin-top: 30px;
-		margin-bottom: 50px;
+		margin-bottom: 0;
+		@include tab {
+			margin-bottom: 50px;
+		}
 		p {
 			margin-top: 0;
 			margin-bottom: 20px;
@@ -1377,9 +1389,8 @@ h1.pagetitle {
 	.content-left {
 		width: 100%;
 		float: left;
-		margin-bottom: 30px;
 		@include tab {
-			width: 68%;
+			width: 69%;
 			float: left;
 			margin-bottom: 0;
 		}
@@ -1415,6 +1426,10 @@ h1.pagetitle {
 }
 
 .widget-area {
+	margin-bottom: 50px;
+	@include tab {
+		margin-bottom: 0;
+	}
 	.widget {
 		margin-bottom: 30px;
 	}
@@ -1502,6 +1517,15 @@ h1.pagetitle {
 		height: 100%;
 		width: 40px;
 		visibility: hidden;
+	}
+}
+.searchfor {
+	font-size: 18px;
+	font-weight: 400;
+	margin: 0 0;
+	em {
+		font-weight: 500;
+		color: $primary;
 	}
 }
 .pagination {

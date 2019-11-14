@@ -2033,8 +2033,11 @@ h1.pagetitle.noline:before{display:none}
 }@media(min-width:780px){.newspage .site-main.full{width:100%;float:left}
 }@media(min-width:780px){.newspage #secondary{width:28%;float:right}
 }.newspage .news-list{margin:0 -15px}
-.newspage .flex-columns{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-flex:2;-webkit-flex:2 1 660px;-ms-flex:2 1 660px;flex:2 1 660px;-webkit-align-self:flex-start;-ms-flex-item-align:start;align-self:flex-start}
-.newspage .news-entry{-webkit-box-flex:1;-webkit-flex:1 1 300px;-ms-flex:1 1 300px;flex:1 1 300px;margin:15px;background-color:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.13)}
+.newspage .flex-columns{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.newspage .news-entry{padding:15px}
+@media(min-width:780px){.newspage .news-entry{width:33.3%}
+}@media(min-width:780px){.newspage .news-entry.twocol{width:50%}
+}.newspage .news-entry .inside{padding:0;height:100%;background-color:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.13)}
 .newspage .news-entry figure{margin:0;display:block;width:100%;float:left}
 .newspage .news-entry figure a{display:block;width:100%;float:left;background-size:cover;background-position:center}
 .newspage .news-entry figure img{width:100%;height:auto;float:left}
@@ -2056,17 +2059,20 @@ h1.pagetitle.noline:before{display:none}
 .single .breadcrumb span.current{color:#d6d6d6}
 .single .wp-post-image{float:left;max-width:100%;width:100%;height:auto;margin-left:0;margin-bottom:30px;box-shadow:0 1px 3px 0 rgba(0,0,0,0.35),0 1px 5px 0 rgba(0,0,0,0.2)}
 .single .content-wrapper{width:100%;float:left}
-.single .entry-content{margin-top:30px;margin-bottom:50px}
-.single .entry-content p{margin-top:0;margin-bottom:20px}
-.single .content-left{width:100%;float:left;margin-bottom:30px}
-@media(min-width:780px){.single .content-left{width:68%;float:left;margin-bottom:0}
+.single .entry-content{margin-top:30px;margin-bottom:0}
+@media(min-width:780px){.single .entry-content{margin-bottom:50px}
+}.single .entry-content p{margin-top:0;margin-bottom:20px}
+.single .content-left{width:100%;float:left}
+@media(min-width:780px){.single .content-left{width:69%;float:left;margin-bottom:0}
 }.single .widget-area{width:100%;float:left;margin-top:25px}
 @media(min-width:780px){.single .widget-area{width:26%;float:right}
 }.single-post .entry-header{margin-top:30px;margin-bottom:10px}
 .single-post h1.pagetitle{margin-top:0;margin-bottom:0;line-height:1.2}
 .single-post h1.pagetitle:before{display:none}
 .single-post .postdate{font-size:12px;color:#a2a2a2;text-transform:uppercase}
-.widget-area .widget{margin-bottom:30px}
+.widget-area{margin-bottom:50px}
+@media(min-width:780px){.widget-area{margin-bottom:0}
+}.widget-area .widget{margin-bottom:30px}
 .widget-area .widget:last-child{margin-bottom:0}
 .widget-area .widget-title{margin:10px 0 5px;font-size:18px;font-weight:500;color:#a11319;text-transform:uppercase;letter-spacing:2px}
 .widget-area ul{margin:0;padding:0;list-style:none}
@@ -2080,6 +2086,8 @@ h1.pagetitle.noline:before{display:none}
 .widget_search input.search-field{width:100%;height:36px;line-height:36px;padding:3px 10px;border:1px solid #CCC;border-radius:20px;-webkit-transition:all ease-out .3s;transition:all ease-out .3s;box-sizing:border-box}
 .widget_search input.search-field:focus{outline:0;border:1px solid #0095a8}
 .widget_search input.search-submit{position:absolute;top:0;right:0;height:100%;width:40px;visibility:hidden}
+.searchfor{font-size:18px;font-weight:400;margin:0}
+.searchfor em{font-weight:500;color:#a11319}
 .pagination{margin-top:20px}
 .pagination span.current,.pagination a{display:inline-block;text-decoration:none;font-size:15px;line-height:1.2;padding:5px 10px 4px;margin:2px}
 .pagination span.current{background:#0095a8;color:#FFF}

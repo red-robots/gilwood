@@ -53,20 +53,22 @@ $banner = display_banner();
 					$px = get_bloginfo("template_url") . "/images/rectangle.png";
 				?>
 				<article id="news-<?php the_ID(); ?>" class="news-entry">
-					<?php if ($img) { ?>
-						<figure>
-							<a href="<?php echo get_permalink(); ?>" style="background-image:url('<?php echo $img[0] ?>');">
-								<img src="<?php echo $px ?>" alt="" aria-hidden="true" />
-							</a>
-						</figure>
-					<?php } ?>
-					<div class="excerpt cf">
-						<h3 class="title"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
-						<div class="postdate"><?php echo get_the_date('F j, Y'); ?></div>
-						<?php if ($content) { ?>
-						<div class="text"><?php echo $content ?></div>
+					<div class="inside cf">
+						<?php if ($img) { ?>
+							<figure>
+								<a href="<?php echo get_permalink(); ?>" style="background-image:url('<?php echo $img[0] ?>');">
+									<img src="<?php echo $px ?>" alt="" aria-hidden="true" />
+								</a>
+							</figure>
 						<?php } ?>
-						<div class="btndiv"><a href="<?php echo get_permalink(); ?>">Read More &rarr;</a></div>
+						<div class="excerpt cf">
+							<h3 class="title"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
+							<div class="postdate"><?php echo get_the_date('F j, Y'); ?></div>
+							<?php if ($content) { ?>
+							<div class="text"><?php echo $content ?></div>
+							<?php } ?>
+							<div class="btndiv"><a href="<?php echo get_permalink(); ?>">Read More &rarr;</a></div>
+						</div>
 					</div>
 				</article>
 				<?php endwhile; wp_reset_postdata(); ?>
