@@ -18,19 +18,21 @@ $posttype = get_post_type();
 
 			<?php if ($posttype=='post') { ?>
 
-				 <div class="breadcrumb">
+				 <!-- <div class="breadcrumb">
 				 	<span class="wrap">
-				 		<a href="<?php echo get_site_url() ?>/news-events/">&lsaquo; News &amp; Events</a>
+				 		<a href="<?php //echo get_site_url() ?>/news-events/">&lsaquo; News &amp; Events</a>
 				 	</span>
-				 </div>
+				 </div> -->
+				 <h1 class="pagetitle"><span><?php echo get_the_title(); ?></span></h1>
+				 <div class="postdate top"><?php echo get_the_date('F j, Y'); ?></div>
 
 				 <div class="content-wrapper">
 					 <div class="content-left">
 					
-						<header class="entry-header">
-							<h1 class="pagetitle"><?php echo get_the_title(); ?></h1>
-							<div class="postdate"><?php echo get_the_date('F j, Y'); ?></div>
-						</header>
+						<!-- <header class="entry-header">
+							<h1 class="pagetitle"><?php //echo get_the_title(); ?></h1>
+							<div class="postdate"><?php //echo get_the_date('F j, Y'); ?></div>
+						</header> -->
 						
 
 						 <?php  
