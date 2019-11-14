@@ -7,21 +7,66 @@
  * @package bellaworks
  */
 
-get_header(); ?>
+get_header();
+$posttype = get_post_type();
+?>
 
-	<div id="primary" class="content-area cf default">
-		<main id="main" class="site-main wrapper cf" role="main">
+<div class="content-area wrapper singlepage cf">
+	<main id="main" class="site-main wrapper cf" role="main">
 
-		<?php
-		while ( have_posts() ) : the_post();
+		<?php while ( have_posts() ) : the_post(); ?>
 
-			get_template_part( 'template-parts/content', get_post_format() );
+			<?php if ($posttype=='post') { ?>
 
-		endwhile; // End of the loop.
-		?>
+				 <div class="breadcrumb">
+				 	<span class="wrap">
+				 		<a href="<?php echo get_site_url() ?>/news-events/">&lsaquo; News &amp; Events</a>
+				 	</span>
+				 </div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				 <div class="content-wrapper">
+					 <div class="content-left">
+					
+						<header class="entry-header">
+							<h1 class="pagetitle"><?php echo get_the_title(); ?></h1>
+							<div class="postdate"><?php echo get_the_date('F j, Y'); ?></div>
+						</header>
+						
+
+						 <?php  
+							$pid = get_the_ID();
+							$thumbId = get_post_thumbnail_id($pid);
+							$img = wp_get_attachment_image_src($thumbId,'full');
+						 ?>
+
+						 <div class="entry-content cf">
+						 	<?php if (has_post_thumbnail()): ?>
+						 		<?php the_post_thumbnail('large'); ?>
+						 	<?php endif ?>
+						 	<?php the_content(); ?>
+						 </div>
+
+					 </div>
+					 <?php get_sidebar(); ?>
+				 </div>
+				
+			<?php } else { ?>
+
+				<h1 class="pagetitle"><span><?php echo get_the_title(); ?></span></h1>
+
+				<div class="entry-content cf">
+				 	<?php if (has_post_thumbnail()): ?>
+				 		<?php the_post_thumbnail('large'); ?>
+				 	<?php endif ?>
+				 	<?php the_content(); ?>
+				 </div>
+
+			<?php } ?>
+
+		<?php endwhile; ?>
+
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
 get_footer();

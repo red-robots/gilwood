@@ -9,21 +9,19 @@
 
 get_header(); ?>
 
+<?php
+	global $wp_query;
+	$total_pages = (isset($wp_query->max_num_pages) && $wp_query->max_num_pages) ? $wp_query->max_num_pages : 0;
+?>
+
 <div class="content-area wrapper newspage cf">
+	
+	<?php the_archive_title( '<h1 class="pagetitle"><span>', '</span></h1>' ); ?>
+	<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+
 	<main id="main" class="site-main" role="main">
 
-		<?php
-		global $wp_query;
-		$total_pages = (isset($wp_query->max_num_pages) && $wp_query->max_num_pages) ? $wp_query->max_num_pages : 0;
-
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+		<?php if ( have_posts() ) : ?>
 
 			<div class="news-list cf">
 				<div class="flex-columns main-stage">

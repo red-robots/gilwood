@@ -15,7 +15,7 @@ $banner = display_banner();
 		<h1 class="pagetitle"><span><?php echo get_the_title(); ?></span></h1>
 	<?php } ?>
 
-	<main id="main" class="site-main cf" role="main">
+	<main id="main" class="site-main full cf" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 			
@@ -98,7 +98,7 @@ $banner = display_banner();
 		?>
 
 	</main><!-- #main -->
-	<?php get_sidebar(); ?>
+	<?php //get_sidebar(); ?>
 </div><!-- #primary -->
 
 

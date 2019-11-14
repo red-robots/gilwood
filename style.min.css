@@ -2022,14 +2022,17 @@ h2.hd{margin:0;font-size:25px;font-weight:500;line-height:1.3;color:#a11319}
 @media(min-width:780px){.contactpage .map iframe{height:380px !important}
 }@media(min-width:960px){.contactpage .map iframe{height:400px !important}
 }@media(min-width:1200px){.contactpage .map iframe{height:450px !important}
-}.newspage{padding-top:0;padding-bottom:50px}
+}h1.pagetitle{font-size:30px;font-weight:500;margin:0 0 30px;color:#a11319;position:relative}
+h1.pagetitle span{display:inline-block;position:relative;z-index:5;background:#FFF;padding-right:25px}
+h1.pagetitle:before{content:"";display:block;width:100%;height:5px;background:#a11319;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+h1.pagetitle.noline{margin-top:20px}
+h1.pagetitle.noline:before{display:none}
+.newspage{padding-top:0;padding-bottom:50px}
 .newspage .site-main{min-height:20em;margin-bottom:20px}
 @media(min-width:780px){.newspage .site-main{width:67%;float:left;margin-bottom:0}
+}@media(min-width:780px){.newspage .site-main.full{width:100%;float:left}
 }@media(min-width:780px){.newspage #secondary{width:28%;float:right}
-}.newspage h1.pagetitle{font-size:30px;font-weight:500;margin:0 0 30px;color:#a11319;position:relative}
-.newspage h1.pagetitle span{display:inline-block;position:relative;z-index:5;background:#FFF;padding-right:25px}
-.newspage h1.pagetitle:before{content:"";display:block;width:100%;height:5px;background:#a11319;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
-.newspage .news-list{margin:0 -15px}
+}.newspage .news-list{margin:0 -15px}
 .newspage .flex-columns{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-flex:2;-webkit-flex:2 1 660px;-ms-flex:2 1 660px;flex:2 1 660px;-webkit-align-self:flex-start;-ms-flex-item-align:start;align-self:flex-start}
 .newspage .news-entry{-webkit-box-flex:1;-webkit-flex:1 1 300px;-ms-flex:1 1 300px;flex:1 1 300px;margin:15px;background-color:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.13)}
 .newspage .news-entry figure{margin:0;display:block;width:100%;float:left}
@@ -2044,6 +2047,25 @@ h2.hd{margin:0;font-size:25px;font-weight:500;line-height:1.3;color:#a11319}
 .newspage .btndiv{margin-top:10px}
 .newspage .btndiv a{text-decoration:none;display:inline-block;color:#a11319;font-size:12px;line-height:1.2;border-bottom:1px solid #a11319}
 .newspage .btndiv a:hover{opacity:.45}
+.single .site-main{min-height:20em}
+.single .breadcrumb{color:#afafaf;position:relative;padding-left:2px}
+.single .breadcrumb:before{content:"";display:block;width:100%;height:5px;background:#a11319;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+.single .breadcrumb .wrap{position:relative;display:inline-block;padding-right:15px;background:#FFF}
+.single .breadcrumb a{color:#0095a8;text-decoration:none;display:inline-block}
+.single .breadcrumb a:hover{color:#a11319}
+.single .breadcrumb span.current{color:#d6d6d6}
+.single .wp-post-image{float:left;max-width:100%;width:100%;height:auto;margin-left:0;margin-bottom:30px;box-shadow:0 1px 3px 0 rgba(0,0,0,0.35),0 1px 5px 0 rgba(0,0,0,0.2)}
+.single .content-wrapper{width:100%;float:left}
+.single .entry-content{margin-top:30px;margin-bottom:50px}
+.single .entry-content p{margin-top:0;margin-bottom:20px}
+.single .content-left{width:100%;float:left;margin-bottom:30px}
+@media(min-width:780px){.single .content-left{width:68%;float:left;margin-bottom:0}
+}.single .widget-area{width:100%;float:left;margin-top:25px}
+@media(min-width:780px){.single .widget-area{width:26%;float:right}
+}.single-post .entry-header{margin-top:30px;margin-bottom:10px}
+.single-post h1.pagetitle{margin-top:0;margin-bottom:0;line-height:1.2}
+.single-post h1.pagetitle:before{display:none}
+.single-post .postdate{font-size:12px;color:#a2a2a2;text-transform:uppercase}
 .widget-area .widget{margin-bottom:30px}
 .widget-area .widget:last-child{margin-bottom:0}
 .widget-area .widget-title{margin:10px 0 5px;font-size:18px;font-weight:500;color:#a11319;text-transform:uppercase;letter-spacing:2px}
