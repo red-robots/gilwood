@@ -171,8 +171,11 @@ function parse_external_url( $url = '', $internal_class = 'internal-link', $exte
 }
 
 function extract_emails_from($string){
-  preg_match_all("/[\._a-zA-Z0-9-]+@[\._a-zA-Z0-9-]+/i", $string, $matches);
-  return $matches[0];
+    $pattern = '/[a-z0-9_\-\+\.]+@[a-z0-9\-]+\.([a-z]{2,4})(?:\.[a-z]{2})?/i';
+    preg_match_all($pattern, $string, $matches);
+    //preg_match_all("/[\._a-zA-Z0-9-]+@[\._a-zA-Z0-9-]+/i", $string, $matches);
+    $result = ( isset($matches[0]) && array_filter($matches[0]) ) ? $matches[0] : '';
+    return $result;
 }
 
 function email_obfuscator($string) {

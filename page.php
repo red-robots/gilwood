@@ -44,6 +44,7 @@ get_header(); ?>
 					$title = $s['title'];
 					$subtitle = $s['subtitle'];
 					$text = $s['text'];
+					$text = ($text) ? email_obfuscator($text) : '';
 					$photos = $s['photo'];
 					$countPhotos = ($photos) ? count($photos) : 0;
 					$rowClass = ($i % 2 == 0) ? 'even':'odd';
