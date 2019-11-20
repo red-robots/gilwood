@@ -170,7 +170,7 @@ function parse_external_url( $url = '', $internal_class = 'internal-link', $exte
     return $output;
 }
 
-function extract_emails_from($string){
+function extract_all_emails($string){
     $pattern = '/[a-z0-9_\-\+\.]+@[a-z0-9\-]+\.([a-z]{2,4})(?:\.[a-z]{2})?/i';
     preg_match_all($pattern, $string, $matches);
     //preg_match_all("/[\._a-zA-Z0-9-]+@[\._a-zA-Z0-9-]+/i", $string, $matches);
@@ -181,7 +181,7 @@ function extract_emails_from($string){
 function email_obfuscator($string) {
     $output = '';
     if($string) {
-        $emails_matched = ($string) ? extract_emails_from($string) : '';
+        $emails_matched = ($string) ? extract_all_emails($string) : '';
         if($emails_matched) {
             foreach($emails_matched as $em) {
                 $encrypted = antispambot($em,1);
@@ -196,6 +196,32 @@ function email_obfuscator($string) {
         $output = apply_filters('the_content',$string);
     }
     return $output;
+}
+
+/* OBFUSCATE EMAIL ON PAGE CONTENT */
+add_filter( 'the_content', 'custom_filter_the_content' );
+function custom_filter_the_content( $content ) {
+    $string = '';
+    $output = '';
+    ob_start();
+    echo $content;
+    $string = ob_get_contents();
+    ob_end_clean();
+    if($string) {
+        $emails_matched = extract_all_emails($string);
+        if($emails_matched) {
+            foreach($emails_matched as $em) {
+                $encrypted = antispambot($em,1);
+                $replace = 'mailto:'.$em;
+                $new_mailto = 'mailto:'.$encrypted;
+                $string = str_replace($replace, $new_mailto, $string);
+                $rep2 = $em.'</a>';
+                $new2 = antispambot($em).'</a>';
+                $string = str_replace($rep2, $new2, $string);
+            }
+        }
+    }
+    return $string;
 }
 
 function get_social_links() {

@@ -86,4 +86,25 @@ jQuery(document).ready(function ($) {
 		$('body').toggleClass('open-mobile-menu');
 	});
 
+	/* Sectional Template */
+	$(".section-text-image").each( function() {
+		var section = $(this);
+		var colNum = section.find(".stcol").length;
+		if ( section.find(".imagecol").length ) {
+			var textCol = section.find(".textcol").outerHeight();
+			var imageCol = section.find(".imagecol").outerHeight();
+			if(textCol > imageCol) {
+				section.find(".colwrap").addClass('alignTop');
+			}
+		}
+
+		if(colNum==1) {
+			section.removeClass("twocol");
+			section.addClass("full");
+		}
+	});
+
+	$(".gform_wrapper li#field_4_2 div.ginput_complex.ginput_container.gf_name_has_2 br").remove();
+	
+
 });// END #####################################    END

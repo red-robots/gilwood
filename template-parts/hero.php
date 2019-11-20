@@ -1,4 +1,7 @@
-<?php if ( is_front_page() ) { ?>
+<?php 
+$pageId = get_the_ID();
+$is_protected = post_password_required( $pageId );
+if ( is_front_page() ) { ?>
 		
 	<?php if( $slides = get_field('slides') ) { 
 		$count = count($slides);
@@ -42,30 +45,34 @@
 
 <?php } else { ?>
 
-	<?php  
-	if( $banner = display_banner() ) {
-		$banner_image = $banner['image'];
-		$banner_caption = $banner['caption'];
-		$banner_button_name = $banner['button_name'];
-		$banner_button_link = $banner['button_link'];
-		?>
-		<div class="hero cf">
-			<img src="<?php echo $banner_image['url'] ?>" alt="<?php echo $banner_image['title'] ?>" />
-			<?php if ($banner_caption) { ?>
-			<div class="hero-caption">
-				<div class="wrap cf">
-					<div class="caption text-center">
-						<?php echo $banner_caption ?>
-						<?php if ($banner_button_name && $banner_button_link) { ?>
-						<div class="btndiv">
-							<a href="<?php echo $banner_button_link ?>"><?php echo $banner_button_name ?></a>
-						</div>	
-						<?php } ?>
+	<?php if (!$is_protected) { ?>
+	
+		<?php  
+		if( $banner = display_banner() ) {
+			$banner_image = $banner['image'];
+			$banner_caption = $banner['caption'];
+			$banner_button_name = $banner['button_name'];
+			$banner_button_link = $banner['button_link'];
+			?>
+			<div class="hero cf">
+				<img src="<?php echo $banner_image['url'] ?>" alt="<?php echo $banner_image['title'] ?>" />
+				<?php if ($banner_caption) { ?>
+				<div class="hero-caption">
+					<div class="wrap cf">
+						<div class="caption text-center">
+							<?php echo $banner_caption ?>
+							<?php if ($banner_button_name && $banner_button_link) { ?>
+							<div class="btndiv">
+								<a href="<?php echo $banner_button_link ?>"><?php echo $banner_button_name ?></a>
+							</div>	
+							<?php } ?>
+						</div>
 					</div>
-				</div>
+				</div>	
+				<?php } ?>
 			</div>	
-			<?php } ?>
-		</div>	
+		<?php } ?>
+
 	<?php } ?>
 
 <?php } ?>
