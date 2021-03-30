@@ -1904,14 +1904,14 @@ section.videos {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-items: stretch;
 		.video {
 			padding: 20px;
 			background-color: $light_teal;
 			flex-basis: 90%;
 			width: auto;
-			margin-bottom: 30px;
+			margin:0 10px 30px 5px;
 			border-bottom: 5px solid rgba($secondary, .1);
 			@media screen and (min-width: $tabwidth) {
 				flex-basis: 30%;
