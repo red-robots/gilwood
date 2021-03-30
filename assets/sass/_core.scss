@@ -1911,11 +1911,13 @@ section.videos {
 			background-color: $light_teal;
 			flex-basis: 90%;
 			width: auto;
+			margin-bottom: 30px;
+			border-bottom: 5px solid rgba($secondary, .1);
 			@media screen and (min-width: $tabwidth) {
 				flex-basis: 30%;
 			}
 			@media screen and (min-width: $deskwidth) {
-				flex-basis: 20%;
+				flex-basis: 18%;
 			}
 			a {
 				text-decoration: none;
