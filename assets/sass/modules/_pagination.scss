@@ -1,0 +1,56 @@
+/* 
+
+
+	Pagination
+
+
+
+-------------------------------------------------------------- */
+.navigation {
+	width: 100%;
+	margin: 20px auto 30px auto;
+	clear: both;
+	display: inline-block;
+	text-align: center;
+
+	& ul {
+		margin: 0 auto;
+		padding: 0;
+		width: auto;
+		display: inline-block;
+	}
+
+	& li {
+		margin: 0;
+		display: inline;
+		list-style: none;
+		a {
+			font-weight: 700;
+		}
+		
+	}
+}
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	background-color: #fff;
+	text-decoration:none;
+}
+ 
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	color: $secondary;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px;
+	@include transition(.3s ease all);
+}
+ 
+.navigation li a:hover,
+.navigation li.active a {
+	color: $primary;
+	// @include boxshadow;
+}

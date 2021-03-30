@@ -1881,4 +1881,63 @@ body.subpage {
 		}
 	}
 }
+section.videos {
+	.filters {
+		width: 100%;
+	}
+	.facetwp-radio {
+	    background-image: none;
+	    background-color: $secondary;
+	    padding: 5px 20px;
+	    display: inline-block;
+	    margin: 5px;
+	    color: #fff;
+	    border-radius: 3px;
+	}
 
+	.facetwp-radio.checked {
+	    background-image: none;
+	    background-color: $primary;
+	}
+	.video-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
+		.video {
+			padding: 20px;
+			background-color: $light_teal;
+			flex-basis: 90%;
+			width: auto;
+			@media screen and (min-width: $tabwidth) {
+				flex-basis: 30%;
+			}
+			@media screen and (min-width: $deskwidth) {
+				flex-basis: 20%;
+			}
+			a {
+				text-decoration: none;
+			}
+			.vidicon {
+				width: 100%;
+				text-align: center;
+				padding: 20px 0;
+			}
+			h2 {
+				color: $gray;
+				width: 100%;
+				text-align: center;
+				margin: 0;
+			}
+		}
+		.button {
+			padding: 5px 15px;
+			color: #fff;
+			background-color: $primary;
+			text-align: center;
+
+		}
+	}
+}
