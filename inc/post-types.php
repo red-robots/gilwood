@@ -18,7 +18,15 @@ function js_custom_init() {
         ),
         array(
             'post_type' => 'video',
-            'menu_name' => 'Video',
+            'menu_name' => 'Devotional Videos',
+            'plural'    => 'Video',
+            'single'    => 'Video',
+            'menu_icon' => 'dashicons-businessman',
+            'supports'  => array('title','editor','thumbnail')
+        ),
+        array(
+            'post_type' => 'sermon_video',
+            'menu_name' => 'Sermon Videos',
             'plural'    => 'Video',
             'single'    => 'Video',
             'menu_icon' => 'dashicons-businessman',
@@ -92,6 +100,13 @@ function ii_custom_taxonomies() {
                 'plural'    => 'Series',
                 'single'    => 'Series',
                 'taxonomy'  => 'series'
+            ),
+            array(
+                'post_type' => 'sermon_video',
+                'menu_name' => 'Series',
+                'plural'    => 'Series',
+                'single'    => 'Series',
+                'taxonomy'  => 'sermon_series'
             ),
         );
     

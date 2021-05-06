@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Devotional Videos
+ * Template Name: Sermon Videos
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -40,7 +40,7 @@ $is_protected = post_password_required( $id );
 			$i = 0;
 				$wp_query = new WP_Query();
 				$wp_query->query(array(
-				'post_type'=>'video',
+				'post_type'=>'sermon_video',
 				'posts_per_page' => 1,
 				'paged' => $paged,
 				'facetwp' => true,
@@ -64,7 +64,7 @@ $is_protected = post_password_required( $id );
 			$i = 0;
 				$wp_query = new WP_Query();
 				$wp_query->query(array(
-				'post_type'=>'video',
+				'post_type'=>'sermon_video',
 				'posts_per_page' => 30,
 				'post__not_in' => array($pID),
 				'paged' => $paged,
@@ -74,7 +74,7 @@ $is_protected = post_password_required( $id );
 					
 						<section class="videos ">
 							<div class="filters">
-								<?php echo do_shortcode('[facetwp facet="videos"]'); ?>
+								<?php echo do_shortcode('[facetwp facet="sermon_videos"]'); ?>
 							</div>
 							<div class="video-container">
 							<?php  while ($wp_query->have_posts()) : $wp_query->the_post(); $i++; ?>
