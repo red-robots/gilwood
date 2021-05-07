@@ -42,8 +42,7 @@ $is_protected = post_password_required( $id );
 				$wp_query->query(array(
 				'post_type'=>'sermon_video',
 				'posts_per_page' => 1,
-				'paged' => $paged,
-				'facetwp' => true,
+				'paged' => $paged
 			));
 				if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); 
 						$pId = get_the_ID();
