@@ -5,21 +5,26 @@
 			$row1_image = get_field('row1_image');
 			$row1_text = get_field('row1_text');
 			$row1_event = get_field('row1_event');
+			$callout = get_field('callout');
 		?>
 		
 		<section class="section row1 cf">
 			<div class="flexrow">
 				<?php if ($row1_image) { ?>
-					<div class="imagecol left">
+					<!-- <div class="imagecol left">
 						<img src="<?php echo $row1_image['url'] ?>" alt="<?php echo $row1_image['title'] ?>" />
-					</div>
+					</div> -->
 				<?php } ?>
 
 				
-					<div class="textcol right">
+					<div class="textcol centertext">
 						<div class="pad cf">
 							<?php if ($row1_text) { ?>
 								<div class="text"><?php echo $row1_text; ?></div>
+							<?php } ?>
+
+							<?php if ($callout) { ?>
+								<div class="callout"><?php echo $callout; ?></div>
 							<?php } ?>
 
 							<?php if ( isset($row1_event['title']) && isset($row1_event['events']) ) { ?>

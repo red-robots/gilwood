@@ -68,6 +68,7 @@ jQuery(document).ready(function ($) {
     width: '80%',
     height: '80%'
   });
+  $('.js-blocks').matchHeight();
   /*
   *
   *	Wow Animation

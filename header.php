@@ -74,6 +74,13 @@ $bodyClass = ($banner_image) ? 'hasbanner':'nobanner';
 		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
-	<?php get_template_part('template-parts/hero'); ?>
+	<?php 
+	if ( !is_front_page() ) {
+		get_template_part('template-parts/hero'); 
+	} else {
+		get_template_part('template-parts/homepage-hero');
+	}
+
+	?>
 
 	<div id="content" class="site-content cf">
