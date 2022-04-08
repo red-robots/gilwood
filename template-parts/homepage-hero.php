@@ -10,8 +10,8 @@ $box2Desc = get_field('box2_description');
 $box2Img = get_field('box2_image');
 $box2Link = get_field('box2_link');
 
-$box3Title = get_field('box2_title');
-$box3Desc = get_field('box2_description');
+$box3Title = get_field('box3_title');
+$box3Desc = get_field('box3_description');
 $box3stream = get_field('box3_stream_embed');
 // $box2Link = get_field('box2_link');
 ?>
