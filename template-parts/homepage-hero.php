@@ -45,7 +45,7 @@ $box3stream = get_field('box3_stream_embed');
 			</div>
 			<div class="box-footer odd">
 				<?php if($box3Title){ ?><h2><?php echo $box3Title; ?></h2><?php } ?>
-				<?php echo $box1Desc; ?>
+				<?php echo $box3Desc; ?>
 			</div>
 		<?php if($box3Link){ ?></a><?php } ?>
 	</div>
